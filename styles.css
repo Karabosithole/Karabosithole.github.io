@@ -8,6 +8,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+    /* Add your background image */
+    background-image: url(/Users/karabosithole/Karabosithole.github.io/images/nasa-hubble-space-telescope-KBT5WugC2JI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header Styles */
