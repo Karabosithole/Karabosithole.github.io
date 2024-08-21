@@ -1,110 +1,58 @@
-/* General Body Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My GitHub Pages Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My GitHub Pages Site</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* Header Styles */
-header {
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A brief introduction about yourself, your background, and what you're passionate about.</p>
+  </section>
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Details of some of the projects you've worked on. You can list them with descriptions, screenshots, or links to GitHub repositories.</p>
+    <ul>
+      <li><a href="https://github.com/Karabosithole/TeachMeJava">Project 1</a> - Teach me Java 1.</li>
+      <li><a href="https://github.com/Karabosithole/affirmation_generator">Project 2</a> - Affirmation Generator 2.</li>
+      <li><a href="https://github.com/Karabosithole/SecuraDocs">Project 3</a> - SecuraDoc 3.</li>
+    </ul>
+  </section>
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0 0;
-}
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>A list of your technical skills and proficiencies.</p>
+    <ul>
+      <li>Programming languages: JavaScript, Python, Java</li>
+      <li>Frameworks: React, Django, Flutter</li>
+      <li>Tools: Git, Docker, AWS</li>
+    </ul>
+  </section>
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, you can reach me at:</p>
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/your-username">your-username</a></p>
+  </section>
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Section Styles */
-section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  border-bottom: 2px solid #2c3e50;
-  padding-bottom: 10px;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-/* Link Styles */
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
+  <footer>
+    <p>&copy; 2024 Your Name</p>
+  </footer>
+</body>
+</html>
