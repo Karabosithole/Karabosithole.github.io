@@ -10,7 +10,7 @@ body {
   text-rendering: optimizeLegibility;
 
     /* Add your background image */
-    background-image: url('https://github.com/Karabosithole/Karabosithole.github.io/blob/main/images/nasa-hubble-space-telescope-KBT5WugC2JI-unsplash.jpg');
+    background-image: url('https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/images/nasa-hubble-space-telescope-KBT5WugC2JI-unsplash.jpg');
     background-size: cover;
     background-position: center;
 }
