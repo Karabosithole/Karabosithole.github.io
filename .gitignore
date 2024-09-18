@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Build output
+public/styles.css
+
+# Environment files
+.env
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Ignore specific IDE/editor files
+.vscode/
+.idea/
+
+# Optional: Ignore any additional build artifacts
+*.log
+*.tmp
