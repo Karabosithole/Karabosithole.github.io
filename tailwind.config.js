@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        softBeige: '#F5F5DC', // Soft beige for dark mode
+        richCream: '#F6F5F0', // Rich cream for accents
+        mutedGreen: '#A4C8A1', // Muted green for buttons
+      },
+    },
   },
   plugins: [],
 }
-
