@@ -138,11 +138,15 @@
   </header>
 
   <!-- Home Section -->
-  <section class="h-screen flex flex-col justify-center items-center">
-    <h1 class="text-6xl font-bold text-center">Hi there Welcome to My Portfolio</h1>
-    <p class="text-xl mt-4 text-center">I’m a tech enthusiast and full-stack developer...</p>
-    <a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">View Projects</a>
-  </section>
+<section class="h-screen flex flex-col justify-center items-center">
+  <h1 class="text-6xl font-bold text-center">Hi there, Welcome to My Portfolio</h1>
+  <p class="text-xl mt-4 text-center">I’m a tech enthusiast and full-stack developer...</p>
+  
+  <!-- Image of yourself -->
+  <img src="link-to-your-image.jpg" alt="Karabo Sithole" class="mt-8 rounded-full w-48 h-48 object-cover">
+
+  <a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">View Projects</a>
+</section>
 
   <!-- About Section -->
   <section id="about" class="py-20">
@@ -228,6 +232,21 @@
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
     }
+  </script>
+
+  <script>
+    window.onload = function() {
+      window.scrollTo(0, 0);
+      // Disable default scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+
+    // Remove any hash from the URL (to prevent jumping to #about or other sections)
+    if (window.location.hash) {
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }  
+    }
+    };
   </script>
 
   <!-- Footer -->
