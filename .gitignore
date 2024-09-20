@@ -1,9 +1,6 @@
 # Node modules
 node_modules/
 
-# Build output
-public/styles.css
-
 # Environment files
 .env
 
@@ -23,3 +20,4 @@ yarn-error.log*
 # Optional: Ignore any additional build artifacts
 *.log
 *.tmp
+
