@@ -5,128 +5,193 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Add your custom colors */
+    /* Basic Colors */
     :root {
-      --mutedGreen: #A5D6A7; /* Elegant green */
+      --mutedGreen: #A5D6A7; /* Light mode background */
       --darkGray: #333333; /* Dark text color */
+      --lightBackground: #ffffff; /* Light mode background */
+      --darkBackground: #222222; /* Dark mode background */
+      --lightText: #333; /* Light mode text color */
+      --darkText: #EAEAEA; /* Dark mode text color */
+    }
+
+    body {
+      background-color: var(--lightBackground);
+      color: var(--lightText);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .dark {
-      --mutedGreen: #3D9970; /* Darker green for dark mode */
-      --darkGray: #EAEAEA; /* Light text color for dark mode */
+      background-color: var(--darkBackground);
+      color: var(--darkText);
     }
+
+    header, section {
+      transition: background-color 0.3s;
+    }
+
+    header {
+      background-color: var(--lightBackground);
+    }
+
+    .dark header {
+      background-color: var(--darkBackground);
+    }
+
+    section {
+      background-color: var(--lightBackground);
+    }
+
+    .dark section {
+      background-color: var(--darkBackground);
+    }
+
+    /* Toggle switch styles */
+    .toggle {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .toggle input {
+      display: none;
+    }
+
+    .slider {
+      position: relative;
+      width: 60px;
+      height: 34px;
+      background-color: #ccc;
+      border-radius: 34px;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider:before {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: #888; /* Dark color for dark mode */
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .sun, .moon {
+      font-size: 18px;
+      color: #333; /* Color for icons */
+      width: 24px; /* Ensure enough space */
+    }
+
+    .sun {
+      margin-right: 8px; /* Space between sun and toggle */
+    }
+
+    .moon {
+      margin-left: 8px; /* Space between toggle and moon */
+    }
+
   </style>
 </head>
-<body class="bg-white text-darkGray font-sans dark:bg-white dark:text-darkGray">
+<body>
 
   <!-- Header -->
-  <header class="bg-white text-darkGray p-6 fixed w-full z-10 top-0 dark:bg-white">
+  <header class="p-6 fixed w-full z-10 top-0">
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold dark:text-darkGray">My Portfolio</a>
+      <a href="#" class="text-3xl font-bold">My Portfolio</a>
       <div class="flex items-center">
-        <a href="#projects" class="px-4 py-2 text-darkGray dark:text-darkGray">Projects</a>
-        <a href="#about" class="px-4 py-2 text-darkGray dark:text-darkGray">About Me</a>
-        <a href="#contact" class="px-4 py-2 text-darkGray dark:text-darkGray">Contact</a>
+        <a href="#projects" class="px-4 py-2">Projects</a>
+        <a href="#about" class="px-4 py-2">About Me</a>
+        <a href="#contact" class="px-4 py-2">Contact</a>
 
-        <!-- Toggle Dropdown -->
-        <div class="relative">
-          <button onclick="toggleDropdown()" class="ml-4 bg-mutedGreen text-white px-4 py-2 rounded">
-            Color Mode
-          </button>
-          <div id="dropdown" class="hidden absolute right-0 bg-white border rounded shadow-lg mt-2">
-            <button onclick="toggleDarkMode()" class="block px-4 py-2 text-darkGray">Toggle Dark Mode</button>
-          </div>
-        </div>
+        <!-- Toggle Switch -->
+        <label class="toggle">
+          <span class="sun"><i class="fas fa-sun"></i></span>
+          <input type="checkbox" onchange="toggleDarkMode()">
+          <span class="slider"></span>
+          <span class="moon"><i class="fas fa-moon"></i></span>
+        </label>
       </div>
     </nav>
   </header>
 
   <!-- Home Section -->
-  <section class="h-screen flex flex-col justify-center items-center bg-cover bg-center" style="background-image: url('path-to-your-image.jpg');">
-    <h1 class="text-6xl font-bold text-darkGray dark:text-darkGray text-center">Welcome to My Portfolio</h1>
-    <p class="text-xl text-gray-700 mt-4 dark:text-darkGray text-center max-w-2xl text-center">I’m a tech enthusiast and full-stack developer passionate about creating innovative solutions that improve everyday life. 
-      With a strong focus on continuous learning and collaboration, I thrive on tackling real-world challenges using technologies like Java, Python, and JavaScript. My approach blends creativity and technical expertise, allowing me to deliver high-quality solutions while pushing the boundaries of what’s possible. I believe in the power of hard work and innovation, and I'm always eager to grow and make a meaningful impact in the software world.
-    </p>
-    <a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full shadow-lg">View Projects</a>
+  <section class="h-screen flex flex-col justify-center items-center">
+    <h1 class="text-6xl font-bold text-center">Welcome to My Portfolio</h1>
+    <p class="text-xl mt-4 text-center">I’m a tech enthusiast and full-stack developer...</p>
+    <a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">View Projects</a>
   </section>
-  
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-white">
+  <section id="projects" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12 dark:text-darkGray">Projects</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project Cards -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="path-to-project-image.jpg" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2 dark:text-darkGray">Project Title 1</h3>
-          <p class="text-gray-700 dark:text-darkGray">Brief description of your project goes here.</p>
-        </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-        <img src="path-to-project-image.jpg" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded-lg">
-        <h3 class="text-2xl font-bold mb-2 dark:text-darkGray">Project Title 2</h3>
-        <p class="text-gray-700 dark:text-darkGray">Brief description of your project goes here.</p>
+          <h3 class="text-2xl font-bold mb-2">Project Title 1</h3>
+          <p>Brief description of your project goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="path-to-project-image.jpg" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2 dark:text-darkGray">Project Title 2</h3>
-          <p class="text-gray-700 dark:text-darkGray">Brief description of your project goes here.</p>
+          <h3 class="text-2xl font-bold mb-2">Project Title 2</h3>
+          <p>Brief description of your project goes here.</p>
+        </div>
         <!-- Repeat for more projects -->
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
+  <section id="about" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12 dark:text-darkGray">About Me</h2>
-      <p class="text-center text-lg max-w-3xl mx-auto dark:text-darkGray">A short bio about yourself. Mention your skills, experience, and interests.</p>
+      <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+      <p class="text-center text-lg max-w-3xl mx-auto">A short bio about yourself. Mention your skills, experience, and interests.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-white">
+  <section id="contact" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12 dark:text-darkGray">Contact</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">Contact</h2>
       <form class="max-w-lg mx-auto">
         <div class="mb-6">
-          <label class="block text-darkGray text-sm font-bold mb-2 dark:text-darkGray" for="name">Name</label>
-          <input class="w-full p-3 border border-mutedGreen rounded-lg" type="text" id="name" placeholder="Your name">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" class="w-full p-3 border rounded-lg">
         </div>
         <div class="mb-6">
-          <label class="block text-darkGray text-sm font-bold mb-2 dark:text-darkGray" for="email">Email</label>
-          <input class="w-full p-3 border border-mutedGreen rounded-lg" type="email" id="email" placeholder="Your email">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your email" class="w-full p-3 border rounded-lg">
         </div>
         <div class="mb-6">
-          <label class="block text-darkGray text-sm font-bold mb-2 dark:text-darkGray" for="message">Message</label>
-          <textarea class="w-full p-3 border border-mutedGreen rounded-lg" id="message" placeholder="Your message" rows="5"></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your message" rows="5" class="w-full p-3 border rounded-lg"></textarea>
         </div>
-        <button class="bg-mutedGreen text-white px-6 py-3 rounded-lg shadow-lg">Send Message</button>
+        <button type="submit" class="bg-mutedGreen text-white px-6 py-3 rounded-lg">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- JavaScript for Dropdown and Dark Mode Toggle -->
+  <!-- JavaScript for Dark Mode Toggle -->
   <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdown');
-      dropdown.classList.toggle('hidden');
-    }
-
     function toggleDarkMode() {
-      const htmlElement = document.documentElement;
-      htmlElement.classList.toggle('dark');
-      const dropdown = document.getElementById('dropdown');
-      dropdown.classList.add('hidden'); // Close dropdown on toggle
+      document.body.classList.toggle('dark');
     }
   </script>
 
   <!-- Footer -->
-  <footer class="bg-white text-darkGray p-6">
-    <div class="max-w-7xl mx-auto text-center">
-      &copy; 2024 Your Name. All rights reserved.
-    </div>
+  <footer class="p-6 text-center">
+    &copy; 2024 Karabo Sithole. All rights reserved.
   </footer>
 
 </body>
