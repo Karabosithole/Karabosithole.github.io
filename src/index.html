@@ -90,7 +90,7 @@
     }
 
     .sun, .moon {
-      font-size: 18px;
+      font-size: 20px;
       color: #333; /* Color for icons */
       width: 24px; /* Ensure enough space */
     }
@@ -98,23 +98,33 @@
     .sun {
       margin-right: 8px; /* Space between sun and toggle */
     }
-
     .moon {
       margin-left: 8px; /* Space between toggle and moon */
     }
 
+    .project-image, .blog-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header class="p-6 fixed w-full z-10 top-0">
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-3xl font-bold">My Portfolio</a>
+      <a href="#" class="text-3xl font-bold">Karabo Sithole</a>
       <div class="flex items-center">
-        <a href="#projects" class="px-4 py-2">Projects</a>
         <a href="#about" class="px-4 py-2">About Me</a>
+        <a href="#projects" class="px-4 py-2">Projects</a>
+        <a href="#blog" class="px-4 py-2">Blog</a>
         <a href="#contact" class="px-4 py-2">Contact</a>
+
+        <!-- CV Download Section -->
+<section id="cv" class="py-4 text-center">
+  <a href="link-to-your-cv.pdf" class="bg-mutedGreen text-white px-6 py-3 rounded-lg" download>Download My CV</a>
+</section>
 
         <!-- Toggle Switch -->
         <label class="toggle">
@@ -129,9 +139,17 @@
 
   <!-- Home Section -->
   <section class="h-screen flex flex-col justify-center items-center">
-    <h1 class="text-6xl font-bold text-center">Welcome to My Portfolio</h1>
+    <h1 class="text-6xl font-bold text-center">Hi there Welcome to My Portfolio</h1>
     <p class="text-xl mt-4 text-center">I’m a tech enthusiast and full-stack developer...</p>
     <a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">View Projects</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+      <p class="text-center text-lg max-w-3xl mx-auto">A short bio about yourself. Mention your skills, experience, and interests.</p>
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -140,11 +158,13 @@
       <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-bold mb-2">Project Title 1</h3>
+          <img src="link-to-your-project-image-1" alt="Project Image 1" class="project-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-project-1" class="text-mutedGreen">Project Title 1</a></h3>
           <p>Brief description of your project goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-bold mb-2">Project Title 2</h3>
+          <img src="link-to-your-project-image-2" alt="Project Image 2" class="project-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-project-2" class="text-mutedGreen">Project Title 2</a></h3>
           <p>Brief description of your project goes here.</p>
         </div>
         <!-- Repeat for more projects -->
@@ -152,11 +172,23 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20">
+  <!-- Blog Section -->
+  <section id="blog" class="py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-      <p class="text-center text-lg max-w-3xl mx-auto">A short bio about yourself. Mention your skills, experience, and interests.</p>
+      <h2 class="text-4xl font-bold text-center mb-12">Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <img src="link-to-your-blog-image-1" alt="Blog Image 1" class="blog-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-1" class="text-mutedGreen">Blog Title 1</a></h3>
+          <p>Brief description of your blog post goes here.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <img src="link-to-your-blog-image-2" alt="Blog Image 2" class="blog-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-2" class="text-mutedGreen">Blog Title 2</a></h3>
+          <p>Brief description of your blog post goes here.</p>
+        </div>
+        <!-- Repeat for more blog posts -->
+      </div>
     </div>
   </section>
 
@@ -182,6 +214,15 @@
     </div>
   </section>
 
+
+<!-- CV Section -->
+<section id="cv" class="py-20">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-12">Download My CV</h2>
+    <a href="link-to-your-cv.pdf" class="bg-mutedGreen text-white px-6 py-3 rounded-lg" download>Download CV</a>
+  </div>
+</section>
+
   <!-- JavaScript for Dark Mode Toggle -->
   <script>
     function toggleDarkMode() {
@@ -190,9 +231,8 @@
   </script>
 
   <!-- Footer -->
-  <footer class="p-6 text-center">
-    &copy; 2024 Karabo Sithole. All rights reserved.
+  <footer class="py-6 text-center">
+    <p>&copy; 2024 Karabo Sithole. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
