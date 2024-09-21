@@ -1,0 +1,20 @@
+{
+    "name": "portfolio-tailwind-css",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "prettier": "^2.8.8",
+      "prettier-plugin-tailwindcss": "^0.2.7",
+      "tailwindcss": "^3.3.1"
+    },
+    "dependencies": {
+      "aos": "^2.3.4"
+    }
+  }

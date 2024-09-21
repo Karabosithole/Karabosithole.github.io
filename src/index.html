@@ -9,9 +9,12 @@
   <style>
     /* Basic Colors */
     :root {
-      --mutedGreen: #A5D6A7; /* Light mode background */
+      --mutedGreen: #2E7D32; /* Primary Color */
+      --lightGreen: #efd9e9; /* Secondary Color */
+      --accentColor: #F06292; /* Accent Color */
+      --lightBackground: #f3f4dc; /* Light Background */
+      --highlightBackground: #F8BBD0; /* Highlight Background */
       --darkGray: #333333; /* Dark text color */
-      --lightBackground: #ffffff; /* Light mode background */
       --darkBackground: #222222; /* Dark mode background */
       --lightText: #333; /* Light mode text color */
       --darkText: #EAEAEA; /* Dark mode text color */
@@ -63,7 +66,7 @@
       position: relative;
       width: 60px;
       height: 34px;
-      background-color: #ccc;
+      background-color: var(--lightGreen);
       border-radius: 34px;
       display: flex;
       align-items: center;
@@ -82,7 +85,7 @@
     }
 
     input:checked + .slider {
-      background-color: #888; /* Dark color for dark mode */
+      background-color: var(--darkGray); /* Dark color for dark mode */
     }
 
     input:checked + .slider:before {
@@ -91,13 +94,14 @@
 
     .sun, .moon {
       font-size: 20px;
-      color: #333; /* Color for icons */
+      color: var(--darkGray); /* Color for icons */
       width: 24px; /* Ensure enough space */
     }
 
     .sun {
       margin-right: 8px; /* Space between sun and toggle */
     }
+
     .moon {
       margin-left: 8px; /* Space between toggle and moon */
     }
@@ -110,21 +114,23 @@
     }
 
     img {
-  max-width: 290px; /* Adjust width as needed */
-  height: auto; /* Keep aspect ratio */
-  border-radius: 97%; /* Adjust to change shape */
-  margin: 0 auto; /* Center the image */
-  display: block; /* Centering */
-}
+      max-width: 290px; /* Adjust width as needed */
+      height: auto; /* Keep aspect ratio */
+      border-radius: 50%; /* Adjust to change shape */
+      margin: 0 auto; /* Center the image */
+      display: block; /* Centering */
+    }
 
-.highlighted-link {
-    text-decoration: underline; /* Underline for specific links */
-    color: #A4C8A1; /* Muted green */
-  }
-  .highlighted-link:hover {
-    color: #333; /* Change color on hover */
-  }
-  </style>
+    .highlighted-link {
+      text-decoration: underline; /* Underline for specific links */
+      color: var(--accentColor); /* Use accent color */
+    }
+
+    .highlighted-link:hover {
+      color: var(--lightGreen); /* Change color on hover */
+    }
+</style>
+
 </head>
 <body>
   <!-- Header -->
@@ -161,7 +167,7 @@
   <!-- Image of yourself -->
 <img src="https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/assets/IMG_2855.jpg" alt="Karabo Sithole" class="mt-8 rounded-full w-48 h-48 object-cover max-w-full">
 
-<a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">View Projects</a>
+<a href="#projects" class="mt-8 bg-mutedGreen text-white px-6 py-3 rounded-full">Check Out My Work</a>
 </section>
 
 
