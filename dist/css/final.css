@@ -687,7 +687,7 @@ video {
   border-width: 1px;
 }
 
-.bg-mutedGreen {
+.bg-customGold {
   --tw-bg-opacity: 1;
   background-color: rgb(226 179 84 / var(--tw-bg-opacity));
 }
@@ -695,11 +695,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-customGold {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 179 84 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -788,7 +783,7 @@ video {
   font-weight: 700;
 }
 
-.text-mutedGreen {
+.text-customGold {
   --tw-text-opacity: 1;
   color: rgb(226 179 84 / var(--tw-text-opacity));
 }
