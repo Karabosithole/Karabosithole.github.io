@@ -9,16 +9,16 @@
   <style>
     /* Basic Colors */
     :root {
-      --customGold: #E2B354; /* Primary Color */
-      --lightGreen: #3A4A68; /* Secondary Color */
-      --accentColor: #E2B354; /* Accent Color */
-      --lightBackground: #EDE5E0; /* Light Background */
-      --highlightBackground: #EDE5E0; /* Highlight Background */
-      --darkGray: #333333; /* Dark text color */
-      --darkBackground: #222222; /* Dark mode background */
-      --lightText: #333; /* Light mode text color */
-      --darkText: #EAEAEA; /* Dark mode text color */
-    }
+  --customGold: #E2B354; /* Primary Color */
+  --lightGreen: #3A4A68; /* Secondary Color */
+  --accentColor: #E2B354; /* Accent Color */
+  --lightBackground: #f1efee; /* Light Background */
+  --highlightBackground: #EDE5E0; /* Highlight Background */
+  --darkGray: #333333; /* Dark text color */
+  --darkBackground: #222222; /* Dark mode background */
+  --lightText: #333; /* Light mode text color */
+  --darkText: #EAEAEA; /* Dark mode text color */
+}
 
     body {
       background-color: var(--lightBackground);
@@ -129,8 +129,23 @@
     .highlighted-link:hover {
       color: var(--lightGreen); /* Change color on hover */
     }
-</style>
 
+    /* Button styles */
+    .btn {
+      background-color: var(--customGold);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: var(--lightGreen); /* Change to light green on hover */
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -144,9 +159,9 @@
         <a href="#contact" class="px-4 py-2">Contact</a>
 
         <!-- CV Download Section -->
-<section id="cv" class="py-4 text-center">
-  <a href="link-to-your-cv.pdf" class="bg-customGold text-white px-6 py-3 rounded-lg" download>Download My CV</a>
-</section>
+        <section id="cv" class="py-4 text-center">
+          <a href="link-to-your-cv.pdf" class="btn" download>Download My CV</a>
+        </section>
 
         <!-- Toggle Switch -->
         <label class="toggle">
@@ -159,46 +174,37 @@
     </nav>
   </header>
 
-<!-- Home Section -->
-<section class="h-screen flex flex-col justify-center items-center">
-  <h1 class="text-6xl font-bold text-center">Hi, I'm Karabo</h1>
-  <p class="text-xl mt-4 text-center">Aspiring software engineer, tech enthusiast, and creator of innovative solutions.</p>
-  
-  <!-- Image of yourself -->
-<img src="https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/assets/IMG_2855.jpg" alt="Karabo Sithole" class="mt-8 rounded-full w-48 h-48 object-cover max-w-full">
+  <!-- Home Section -->
+  <section class="h-screen flex flex-col justify-center items-center">
+    <h1 class="text-6xl font-bold text-center">Hi, I'm Karabo</h1>
+    <p class="text-xl mt-4 text-center">Aspiring software engineer, tech enthusiast, and creator of innovative solutions.</p>
+    
+    <!-- Image of yourself -->
+    <img src="https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/assets/IMG_2855.jpg" alt="Karabo Sithole" class="mt-8 rounded-full w-48 h-48 object-cover max-w-full">
+    <a href="#projects" class="btn mt-8">Check Out My Work</a>
+  </section>
 
-<a href="#projects" class="mt-8 bg-bg-customGoldn text-white px-6 py-3 rounded-full">Check Out My Work</a>
-</section>
-
-
-
-<!-- About Section -->
-<section id="about" class="py-20">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-    <p class="text-center text-lg max-w-3xl mx-auto">
-      Hey there! I’m <strong>Karabo Sithole</strong>, an aspiring software engineer based in Johannesburg. My passion lies in exploring the vast world of technology, constantly learning, and pushing my boundaries. With a solid foundation in <strong>Java, Python, and JavaScript</strong>, and experience working with tools like <strong>Git, Docker, and SQL</strong>, I’m eager to expand my knowledge and tackle new challenges across various tech domains.
-    </p>
-    <p class="text-center text-lg max-w-3xl mx-auto mt-4">
-      What excites me most is the opportunity to grow through hands-on project work, collaboration, and continuous learning. I thrive in environments where I can explore different languages, tools, and methodologies, and I'm always looking for ways to apply what I learn to real-world problems. Whether it's building backend systems, designing user-friendly frontends, or diving into cloud computing, I’m committed to becoming a well-rounded developer who delivers high-quality solutions.
-    </p>
-    <p class="text-center text-lg max-w-3xl mx-auto mt-4">
-      At my core, I believe in adaptability and learning through experience. I'm excited to embrace opportunities that broaden my technical expertise and prepare me for a successful career in software development. With a strong work ethic, a love for both innovation and fun, and a passion for self-improvement, I’m ready to contribute to projects that make an impact.
-    </p>
-    <p class="text-center text-lg max-w-3xl mx-auto mt-4">
-      Let’s connect and build something incredible! Check out my work on 
-      <a href="https://github.com/Karabosithole" target="_blank" class="highlighted-link">GitHub</a>
-      or connect with me on 
-      <a href="https://www.linkedin.com/in/karabo-sithole-b4b208278" target="_blank" class="highlighted-link">LinkedIn</a>.
-    </p>
-  </div>
-</section>
-
-
-
-
-
-
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+      <p class="text-center text-lg max-w-3xl mx-auto">
+        Hey there! I’m <strong>Karabo Sithole</strong>, an aspiring software engineer based in Johannesburg. My passion lies in exploring the vast world of technology, constantly learning, and pushing my boundaries. With a solid foundation in <strong>Java, Python, and JavaScript</strong>, and experience working with tools like <strong>Git, Docker, and SQL</strong>, I’m eager to expand my knowledge and tackle new challenges across various tech domains.
+      </p>
+      <p class="text-center text-lg max-w-3xl mx-auto mt-4">
+        What excites me most is the opportunity to grow through hands-on project work, collaboration, and continuous learning. I thrive in environments where I can explore different languages, tools, and methodologies, and I'm always looking for ways to apply what I learn to real-world problems. Whether it's building backend systems, designing user-friendly frontends, or diving into cloud computing, I’m committed to becoming a well-rounded developer who delivers high-quality solutions.
+      </p>
+      <p class="text-center text-lg max-w-3xl mx-auto mt-4">
+        At my core, I believe in adaptability and learning through experience. I'm excited to embrace opportunities that broaden my technical expertise and prepare me for a successful career in software development. With a strong work ethic, a love for both innovation and fun, and a passion for self-improvement, I’m ready to contribute to projects that make an impact.
+      </p>
+      <p class="text-center text-lg max-w-3xl mx-auto mt-4">
+        Let’s connect and build something incredible! Check out my work on 
+        <a href="https://github.com/Karabosithole" target="_blank" class="highlighted-link">GitHub</a>
+        or connect with me on 
+        <a href="https://www.linkedin.com/in/karabo-sithole-b4b208278" target="_blank" class="highlighted-link">LinkedIn</a>.
+      </p>
+    </div>
+  </section>
 
   <!-- Projects Section -->
   <section id="projects" class="py-20">
@@ -211,15 +217,15 @@
           <p>Brief description of your project goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="link-to-your-project-image-2" alt="Learn Java, Playing Snake" class="project-image">
-          <h3 class="text-2xl font-bold mb-2"><a href="https://github.com/Karabosithole/LearnJavaSnakeGame" class="text-customGold">Learn Java through classic Snake game</a></h3>
-          <p>An interactive Snake game that combines classic gameplay with educational elements.</p>
+          <img src="link-to-your-project-image-2" alt="Project Image 2" class="project-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="https://github.com/Karabosithole/java-mini-projects" class="text-customGold">Project Title 2</a></h3>
+          <p>Brief description of your project goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="link-to-your-project-image-2" alt="Learn Java, Playing Snake" class="project-image">
-          <h3 class="text-2xl font-bold mb-2"><a href="https://github.com/Karabosithole/LearnJavaSnakeGame" class="text-customGold">Learn Java through classic Snake game</a></h3>
-          <p>An interactive Snake game that combines classic gameplay with educational elements.</p>
-        <!-- Repeat for more projects -->
+          <img src="link-to-your-project-image-3" alt="Project Image 3" class="project-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="https://github.com/Karabosithole/java-mini-projects" class="text-customGold">Project Title 3</a></h3>
+          <p>Brief description of your project goes here.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -231,79 +237,58 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img src="link-to-your-blog-image-1" alt="Blog Image 1" class="blog-image">
-          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-1" class="text-customGold">Blog Title 1</a></h3>
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-post-1" class="text-customGold">Blog Post Title 1</a></h3>
           <p>Brief description of your blog post goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
           <img src="link-to-your-blog-image-2" alt="Blog Image 2" class="blog-image">
-          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-2" class="text-customGold">Blog Title 2</a></h3>
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-post-2" class="text-customGold">Blog Post Title 2</a></h3>
           <p>Brief description of your blog post goes here.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <img src="link-to-your-blog-image-2" alt="Blog Image 2" class="blog-image">
-          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-2" class="text-customGold">Blog Title 2</a></h3>
+          <img src="link-to-your-blog-image-3" alt="Blog Image 3" class="blog-image">
+          <h3 class="text-2xl font-bold mb-2"><a href="link-to-your-blog-post-3" class="text-customGold">Blog Post Title 3</a></h3>
           <p>Brief description of your blog post goes here.</p>
-        <!-- Repeat for more blog posts -->
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Contact</h2>
-      <form class="max-w-lg mx-auto">
-        <div class="mb-6">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" class="w-full p-3 border rounded-lg">
-        </div>
-        <div class="mb-6">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Your email" class="w-full p-3 border rounded-lg">
-        </div>
-        <div class="mb-6">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Your message" rows="5" class="w-full p-3 border rounded-lg"></textarea>
-        </div>
-        <button type="submit" class="bg-customGold text-white px-6 py-3 rounded-lg">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-
-<!-- CV Section -->
-<section id="cv" class="py-20">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold mb-12">Download My CV</h2>
-    <a href="link-to-your-cv.pdf" class="bg-customGold text-white px-6 py-3 rounded-lg" download>Download CV</a>
+<section id="contact" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Contact Me</h2>
+    <form class="max-w-lg mx-auto">
+      <div class="mb-6">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" class="w-full p-3 border rounded-lg">
+      </div>
+      <div class="mb-6">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email" class="w-full p-3 border rounded-lg">
+      </div>
+      <div class="mb-6">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your message" rows="5" class="w-full p-3 border rounded-lg"></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </div>
 </section>
 
-  <!-- JavaScript for Dark Mode Toggle -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');  //switches everything to dark mode
-    }
-  </script>
 
-  <script>
-    window.onload = function() {
-      window.scrollTo(0, 0);
-      // Disable default scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
 
-    // Remove any hash from the URL (to prevent jumping to #about or other sections)
-    if (window.location.hash) {
-      history.pushState("", document.title, window.location.pathname + window.location.search);
-    }  
-    }
-    };
-  </script>
+
 
   <!-- Footer -->
   <footer class="py-6 text-center">
     <p>&copy; 2024 Karabo Sithole. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
