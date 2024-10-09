@@ -9,16 +9,20 @@
   <style>
     /* Basic Colors */
     :root {
-  --customGold: #b1bc51; /* Primary Color */
-  --lightGreen: #e8384f; /* Secondary Color */
-  --accentColor: #b1bc51; /* Accent Color */
-  --lightBackground: #f9f6e9; /* Light Background */
-  --highlightBackground: #EDE5E0; /* Highlight Background */
-  --darkGray: #333333; /* Dark text color */
-  --darkBackground: #222222; /* Dark mode background */
-  --lightText: #333; /* Light mode text color */
-  --darkText: #EAEAEA; /* Dark mode text color */
+  --customGold: #e3c9a7; /* Lighter gold primary color */
+  --lightGreen: #f4c8ca; /* Lighter pinkish secondary color */
+  --accentColor: #f3b040; /* More golden accent color */
+  --lightBackground: #fff6e5; /* Creamier light background */
+  --highlightBackground: #f3e1cc; /* Gentle highlight */
+  --darkGray: #4c4c4c; /* Lighter dark text color */
+  --darkBackground: #242424; /* Slightly lighter dark mode background */
+  --lightText: #333333; /* Richer light mode text color */
+  --darkText: #ececec; /* Softer dark mode text color */
 }
+
+
+
+
 
     body {
       background-color: var(--lightBackground);
@@ -114,12 +118,16 @@
     }
 
     img {
-      max-width: 290px; /* Adjust width as needed */
-      height: auto; /* Keep aspect ratio */
-      border-radius: 50%; /* Adjust to change shape */
-      margin: 0 auto; /* Center the image */
-      display: block; /* Centering */
-    }
+    max-width: 400px; /* Keep this to limit the size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep it circular if desired */
+    margin: 20px auto; /* Center the image and add some margin above/below */
+    display: block; /* Center the image */
+    transition: max-width 0.3s; /* Add a transition effect */
+    position: relative; /* Make sure the image is positioned properly */
+    z-index: 1; /* Ensure the image is above the background */
+}
+
 
     .highlighted-link {
       text-decoration: underline; /* Underline for specific links */
@@ -175,17 +183,24 @@
   </header>
 
   <!-- Home Section -->
-  <section class="h-screen flex flex-col justify-center items-center">
-    <h1 class="text-6xl font-bold text-center">Hi, I'm Karabo</h1>
-    <p class="text-xl mt-4 text-center">Aspiring software engineer, tech enthusiast, and creator of innovative solutions.</p>
-    
-    <!-- Image of yourself -->
-    <img src="https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/assets/IMG_2855.jpg" alt="Karabo Sithole" class="mt-8 rounded-full w-48 h-48 object-cover max-w-full">
-    <a href="#projects" class="btn mt-8">Check Out My Work</a>
-  </section>
+<section class="h-screen flex flex-col justify-center items-center" style="position: relative;">
+
+  <!-- Image of yourself -->
+  <img src="https://raw.githubusercontent.com/Karabosithole/Karabosithole.github.io/main/assets/IMG_2855.jpg" 
+       alt="Karabo Sithole">
+
+  <div style="text-align: center; z-index: 2;"> <!-- Text container -->
+    <h1 class="text-6xl font-bold">Hi, I'm Karabo</h1>
+    <p class="text-xl mt-4">Aspiring software engineer, tech enthusiast, and creator of innovative solutions.</p>
+  </div>
+
+  <a href="#projects" class="btn mt-8">Check Out My Work</a>
+</section>
+
+
 
   <!-- About Section -->
-  <section id="about" class="py-20">
+  <section id="about" class="py-19">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
       <p class="text-center text-lg max-w-3xl mx-auto">
